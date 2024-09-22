@@ -2,7 +2,7 @@
 
 ## Check if your device is supported
 
-Download KernelSU manager APP from [GitHub Releases](https://github.com/tiann/KernelSU/releases) and install it to your device:
+Download KernelSU manager APP from [GitHub Releases](https://github.com/Quixoticly/KernelSU/releases) and install it to your device:
 
 - If the app shows `Unsupported`, it means **you should compile the kernel yourself**, KernelSU won't and never provide a boot image for you to flash.
 - If the app shows `Not installed`, then your devices is officially supported by KernelSU.
@@ -112,7 +112,7 @@ Open the manager, click the installation icon in the upper right corner, and sev
 
 If you don’t want to use the manager, you can also use the command line to install LKM; the `ksud` tool provided by KernelSU can help you quickly patch the official firmware and then flash it.
 
-This tool supports macOS, Linux, and Windows. You can download the corresponding version from [GitHub Release](https://github.com/tiann/KernelSU/releases).
+This tool supports macOS, Linux, and Windows. You can download the corresponding version from [GitHub Release](https://github.com/Quixoticly/KernelSU/releases).
 
 Usage: `ksud boot-patch`. You can check the command line help for specific options.
 
@@ -163,7 +163,7 @@ If your device's `boot.img` uses a commonly used compression format, you can use
 
 KernelSU provides a generic boot.img for GKI devices, and you should flash the boot.img to the boot partition of the device.
 
-You can download boot.img from [GitHub Release](https://github.com/tiann/KernelSU/releases), please note that you should use the correct version of boot.img. If you don't know which file to download, please carefully read the description of [KMI](#kmi) and [Security patch level](#security-patch-level) in this document.
+You can download boot.img from [GitHub Release](https://github.com/Quixoticly/KernelSU/releases), please note that you should use the correct version of boot.img. If you don't know which file to download, please carefully read the description of [KMI](#kmi) and [Security patch level](#security-patch-level) in this document.
 
 Normally, there are three boot files in different formats under the same KMI and security patch level. They are all the same except for the kernel compression format. Please check the kernel compression format of your original boot.img. You should use the correct format, such as `lz4`, `gz`; if you use an incorrect compression format, you may encounter bootloop after flashing boot.
 
@@ -264,7 +264,7 @@ Prerequisite: Your device must have a Custom Recovery, such as TWRP; if there is
 
 Steps:
 
-1. From the [Release page](https://github.com/tiann/KernelSU/releases) of KernelSU, download the zip package starting with `AnyKernel3` that matches your phone version; for example, if the device's kernel version is `android12-5.10. 66`, then you should download the `AnyKernel3-android12-5.10.66_yyyy-MM.zip` file (where `yyyy` is the year and `MM` is the month).
+1. From the [Release page](https://github.com/Quixoticly/KernelSU/releases) of KernelSU, download the zip package starting with `AnyKernel3` that matches your phone version; for example, if the device's kernel version is `android12-5.10. 66`, then you should download the `AnyKernel3-android12-5.10.66_yyyy-MM.zip` file (where `yyyy` is the year and `MM` is the month).
 2. Reboot the device into TWRP.
 3. Use adb to place AnyKernel3-*.zip into the device's `/sdcard` location and choose to install it in the TWRP GUI; or you can directly run `adb sideload AnyKernel-*.zip` to install.
 
